@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd">
+
+<context:annotation-config></context:annotation-config>
+
+
+<!-- Configuring DataSource  -->
+
+	<bean id="datasource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver">
+		</property>
+		<property name="url"
+			value="jdbc:oracle:thin:@localhost:1521:xe">
+		</property>
+		<property name="username" value="system"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	<!-- Configuring Jdbc Temoplate -->
+	
+	 <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="datasource"></constructor-arg>
+	</bean>
+	
+	<!-- Configuring DepartmentDao -->
+	<bean id="deptDao" class="com.vikram.DaoImpl.DeptDaoImpl">
+	<!-- <property name="JdbcTemplate" ref="jt"></property> -->
+	
+	
+	</bean>
+
+</beans>

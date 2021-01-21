@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location"><value>C://Users//Vikram//Desktop//Java Spring Frame Works//Spring_Property_Explicitly//src//main//java//db.properties</value></property>
+	</bean>
+	<bean id="ibrf" class="com.vikram.pojo.DataBaseProp">
+	<property name="username" ><value>${USERNAME}</value></property>
+	<property name="password" ><value>${PASSWORD}</value></property>
+	<property name="url" ><value>${URL}</value></property>
+	<property name="driverclass" ><value>${DRIVERCLASS}</value></property>
+	
+	
+	</bean>
+</beans>
