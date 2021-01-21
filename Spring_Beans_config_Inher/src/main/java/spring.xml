@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+<!-- --
+<bean id="emp" class="com.vikram.pojo.Employee">
+<property name="eno"><value>125</value></property>
+<property name="ename"><value>vikram</value></property>
+<property name="salary"><value>55000</value></property>
+<property name="Design"><value>Developer</value></property>
+<property name="city"><value>Canada</value></property>
+<property name="hno"><value>2125 Rue Saint Marc</value></property>
+</bean>
+<bean id="emp1" class="com.vikram.pojo.Employee">
+<property name="eno"><value>126</value></property>
+<property name="ename"><value>nik</value></property>
+<property name="salary"><value>55000</value></property>
+<property name="Design"><value>Developer</value></property>
+<property name="city"><value>Canada</value></property>
+<property name="hno"><value>294 Chandlers</value></property>
+</bean>
+<bean id="emp2" class="com.vikram.pojo.Employee">
+<property name="eno"><value>127</value></property>
+<property name="ename"><value>pik</value></property>
+<property name="salary"><value>55000</value></property>
+<property name="Design"><value>Developer</value></property>
+<property name="city"><value>Canada</value></property>
+<property name="hno"><value>200 Finch Drive</value></property>
+</bean>
+---->
+<bean id="emp" class="com.vikram.pojo.Employee">
+<property name="eno"><value>125</value></property>
+<property name="ename"><value>vikram</value></property>
+<property name="salary"><value>55000</value></property>
+<property name="Design"><value>Developer</value></property>
+<property name="city"><value>Canada</value></property>
+<property name="hno"><value>2125 Rue Saint Marc</value></property>
+</bean>
+<bean id="emp1" class="com.vikram.pojo.Employee" parent="emp">
+<property name="eno"><value>126</value></property>
+<property name="ename"><value>nik</value></property>
+<property name="hno"><value>294 Chandlers</value></property>
+</bean>
+<bean id="emp2" class="com.vikram.pojo.Employee" parent="emp">
+<property name="eno"><value>127</value></property>
+<property name="ename"><value>pik</value></property>
+<property name="hno"><value>200 Finch Drive</value></property>
+</bean>
+</beans>

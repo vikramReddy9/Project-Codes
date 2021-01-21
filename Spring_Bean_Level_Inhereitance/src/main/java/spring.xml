@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+<bean id="child" class="com.vikram.pojo.Child">
+<property name="Money"><value>1000</value></property>
+<property name="Documents"><value>DebitDocs</value></property>
+<property name="Diseases"><value>None</value></property>
+<property name="Knowledge"><value>IIT</value></property>
+<property name="Badhabits"><value>Non Smoking</value></property>
+</bean>
+
+</beans>

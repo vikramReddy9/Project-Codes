@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+<context:annotation-config></context:annotation-config>
+<bean id="address" class="com.vikram.Spring_Autowiring.Address">
+<property name="city" value="montreal"></property>
+<property name="hno" value="2125"></property>
+
+</bean>
+<bean id="address1" class="com.vikram.Spring_Autowiring.Address">
+<property name="city" value="Kitchener"></property>
+<property name="hno" value="294"></property>
+
+</bean>
+<bean id="address2" class="com.vikram.Spring_Autowiring.Address">
+<property name="city" value="sarnia"></property>
+<property name="hno" value="758"></property>
+
+</bean>
+<bean id="emp" class="com.vikram.Spring_Autowiring.Employee">
+<property name="eno" value="1"></property>
+<property name="ename" value="nic"></property>
+<!--  <property name="address" ref="add"></property> -->
+</bean>
+
+</beans>

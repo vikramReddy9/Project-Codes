@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+<bean id="stu" class="com.vikram.pojo.Student">
+<property name="sno" value="100"></property>
+<property name="sname" value="vik"></property>
+<property name="sfee" value="250000"></property>
+</bean>
+<bean id="stu1" class="com.vikram.pojo.Student">
+<property name="sno" value="101"></property>
+<property name="sname" value="nik"></property>
+<property name="sfee" value="250000"></property>
+</bean>
+<bean id="stu2" class="com.vikram.pojo.Student">
+<property name="sno" value="102"></property>
+<property name="sname" value="pik"></property>
+<property name="sfee" value="250000"></property>
+</bean>
+<bean name="col" class="com.vikram.pojo.College">
+<property name="name" value="CMRIT"></property>
+<property name="students">
+<list>
+<ref bean="stu"></ref>
+<ref bean="stu1"></ref>
+<ref bean="stu2"></ref>
+</list>
+</property>
+
+</bean>
+</beans>
